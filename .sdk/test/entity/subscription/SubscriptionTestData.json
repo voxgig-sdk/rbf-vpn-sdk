@@ -1,0 +1,33 @@
+{
+  "existing": {
+    "subscription": {
+      "SUBSCRIPTION00": {
+        "config": {},
+        "expiry": "s1f",
+        "subscription": "s20",
+        "id": "SUBSCRIPTION00"
+      },
+      "SUBSCRIPTION01": {
+        "config": {},
+        "expiry": "s3d",
+        "subscription": "s3e",
+        "id": "SUBSCRIPTION01"
+      },
+      "SUBSCRIPTION02": {
+        "config": {},
+        "expiry": "s5b",
+        "subscription": "s5c",
+        "id": "SUBSCRIPTION02"
+      }
+    }
+  },
+  "new": {
+    "subscription": {
+      "subscription_ref01": {
+        "config": {},
+        "expiry": "s79",
+        "subscription": "s7a"
+      }
+    }
+  }
+}

@@ -1,0 +1,48 @@
+# Entity: subscription
+
+main: kit: entity: subscription: {
+
+  alias: field: {}
+
+  fields: [
+    {
+      name: "config"
+      req: false
+      type: "`$OBJECT`"
+    }
+    {
+      name: "expiry"
+      req: false
+      type: "`$STRING`"
+    }
+    {
+      name: "subscription"
+      req: false
+      type: "`$STRING`"
+    }
+  ]
+
+  name: "subscription"
+  op: {
+    load: {
+      name: "load"
+      points: [
+        {
+          method: "GET"
+          orig: "/api/demo"
+          parts: [
+            "api"
+            "demo"
+          ]
+          transform: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+  }
+
+
+
+}

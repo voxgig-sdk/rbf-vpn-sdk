@@ -1,0 +1,108 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "RBF VPN API",
+    "description": "This API provides temporary access to services on rbf1.info, allowing developers to interact programmatically with the RBF network. It facilitates various functionalities related to RBF services, enabling effective integration into apps and solutions.",
+    "version": "1.0.0",
+    "contact": {
+      "url": "https://github.com/l0v3m0n3y/rbfvpn"
+    }
+  },
+  "servers": [
+    {
+      "url": "https://rbf1.info",
+      "description": "RBF VPN API Server"
+    }
+  ],
+  "paths": {
+    "/api/demo": {
+      "get": {
+        "summary": "Get demo subscription",
+        "description": "Retrieves a temporary demo subscription for testing and accessing RBF VPN services.",
+        "operationId": "getDemoSubscription",
+        "tags": [
+          "Subscription"
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response with demo subscription details",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "subscription": {
+                      "type": "string",
+                      "description": "Demo subscription identifier or access token"
+                    },
+                    "expiry": {
+                      "type": "string",
+                      "format": "date-time",
+                      "description": "Expiration date and time of the demo subscription"
+                    },
+                    "config": {
+                      "type": "object",
+                      "description": "VPN configuration details for the demo subscription",
+                      "properties": {
+                        "server": {
+                          "type": "string",
+                          "description": "VPN server address"
+                        },
+                        "protocol": {
+                          "type": "string",
+                          "description": "VPN protocol to use"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request - Invalid parameters",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "error": {
+                      "type": "string",
+                      "description": "Error message describing what went wrong"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal server error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "error": {
+                      "type": "string",
+                      "description": "Error message describing the server issue"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "tags": [
+    {
+      "name": "Subscription",
+      "description": "Operations related to RBF VPN subscription management"
+    }
+  ],
+  "externalDocs": {
+    "description": "API Documentation on GitHub",
+    "url": "https://github.com/l0v3m0n3y/rbfvpn"
+  }
+}

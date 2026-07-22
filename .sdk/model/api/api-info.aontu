@@ -1,0 +1,25 @@
+# API Information
+
+
+main: {
+  kit: {
+    info: {
+      auth: false
+      contact: {
+        url: "https://github.com/l0v3m0n3y/rbfvpn"
+      }
+      description: "This API provides temporary access to services on rbf1.info, allowing developers to interact programmatically with the RBF network. It facilitates various functionalities related to RBF services, enabling effective integration into apps and solutions."
+      servers: [
+        {
+          description: "RBF VPN API Server"
+          url: "https://rbf1.info"
+        }
+      ]
+      summary: "This API provides temporary access to services on rbf1.info, allowing developers to interact programmatically with the RBF network."
+      title: "RBF VPN API"
+      version: "1.0.0"
+      website: "https://github.com/l0v3m0n3y/rbfvpn"
+    }
+  }
+}
+

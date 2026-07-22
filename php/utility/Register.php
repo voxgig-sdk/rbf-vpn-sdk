@@ -1,0 +1,67 @@
+<?php
+declare(strict_types=1);
+
+// RbfVpn SDK utility registration
+
+require_once __DIR__ . '/../core/UtilityType.php';
+require_once __DIR__ . '/Clean.php';
+require_once __DIR__ . '/Done.php';
+require_once __DIR__ . '/MakeError.php';
+require_once __DIR__ . '/FeatureAdd.php';
+require_once __DIR__ . '/FeatureHook.php';
+require_once __DIR__ . '/FeatureInit.php';
+require_once __DIR__ . '/Fetcher.php';
+require_once __DIR__ . '/MakeFetchDef.php';
+require_once __DIR__ . '/MakeContext.php';
+require_once __DIR__ . '/MakeOptions.php';
+require_once __DIR__ . '/MakeRequest.php';
+require_once __DIR__ . '/MakeResponse.php';
+require_once __DIR__ . '/MakeResult.php';
+require_once __DIR__ . '/MakePoint.php';
+require_once __DIR__ . '/MakeSpec.php';
+require_once __DIR__ . '/MakeUrl.php';
+require_once __DIR__ . '/Param.php';
+require_once __DIR__ . '/PrepareAuth.php';
+require_once __DIR__ . '/PrepareBody.php';
+require_once __DIR__ . '/PrepareHeaders.php';
+require_once __DIR__ . '/PrepareMethod.php';
+require_once __DIR__ . '/PrepareParams.php';
+require_once __DIR__ . '/PreparePath.php';
+require_once __DIR__ . '/PrepareQuery.php';
+require_once __DIR__ . '/ResultBasic.php';
+require_once __DIR__ . '/ResultBody.php';
+require_once __DIR__ . '/ResultHeaders.php';
+require_once __DIR__ . '/TransformRequest.php';
+require_once __DIR__ . '/TransformResponse.php';
+
+RbfVpnUtility::setRegistrar(function (RbfVpnUtility $u): void {
+    $u->clean = [RbfVpnClean::class, 'call'];
+    $u->done = [RbfVpnDone::class, 'call'];
+    $u->make_error = [RbfVpnMakeError::class, 'call'];
+    $u->feature_add = [RbfVpnFeatureAdd::class, 'call'];
+    $u->feature_hook = [RbfVpnFeatureHook::class, 'call'];
+    $u->feature_init = [RbfVpnFeatureInit::class, 'call'];
+    $u->fetcher = [RbfVpnFetcher::class, 'call'];
+    $u->make_fetch_def = [RbfVpnMakeFetchDef::class, 'call'];
+    $u->make_context = [RbfVpnMakeContext::class, 'call'];
+    $u->make_options = [RbfVpnMakeOptions::class, 'call'];
+    $u->make_request = [RbfVpnMakeRequest::class, 'call'];
+    $u->make_response = [RbfVpnMakeResponse::class, 'call'];
+    $u->make_result = [RbfVpnMakeResult::class, 'call'];
+    $u->make_point = [RbfVpnMakePoint::class, 'call'];
+    $u->make_spec = [RbfVpnMakeSpec::class, 'call'];
+    $u->make_url = [RbfVpnMakeUrl::class, 'call'];
+    $u->param = [RbfVpnParam::class, 'call'];
+    $u->prepare_auth = [RbfVpnPrepareAuth::class, 'call'];
+    $u->prepare_body = [RbfVpnPrepareBody::class, 'call'];
+    $u->prepare_headers = [RbfVpnPrepareHeaders::class, 'call'];
+    $u->prepare_method = [RbfVpnPrepareMethod::class, 'call'];
+    $u->prepare_params = [RbfVpnPrepareParams::class, 'call'];
+    $u->prepare_path = [RbfVpnPreparePath::class, 'call'];
+    $u->prepare_query = [RbfVpnPrepareQuery::class, 'call'];
+    $u->result_basic = [RbfVpnResultBasic::class, 'call'];
+    $u->result_body = [RbfVpnResultBody::class, 'call'];
+    $u->result_headers = [RbfVpnResultHeaders::class, 'call'];
+    $u->transform_request = [RbfVpnTransformRequest::class, 'call'];
+    $u->transform_response = [RbfVpnTransformResponse::class, 'call'];
+});
