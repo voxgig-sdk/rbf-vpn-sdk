@@ -24,6 +24,7 @@ require_relative 'prepare_method'
 require_relative 'prepare_params'
 require_relative 'prepare_path'
 require_relative 'prepare_query'
+require_relative 'graphql'
 require_relative 'result_basic'
 require_relative 'result_body'
 require_relative 'result_headers'
@@ -55,6 +56,8 @@ RbfVpnUtility.registrar = ->(u) {
   u.prepare_params = RbfVpnUtilities::PrepareParams
   u.prepare_path = RbfVpnUtilities::PreparePath
   u.prepare_query = RbfVpnUtilities::PrepareQuery
+  u.graphql_body = RbfVpnUtilities::GraphqlBody
+  u.graphql_errors = RbfVpnUtilities::GraphqlErrors
   u.result_basic = RbfVpnUtilities::ResultBasic
   u.result_body = RbfVpnUtilities::ResultBody
   u.result_headers = RbfVpnUtilities::ResultHeaders

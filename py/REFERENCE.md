@@ -87,9 +87,8 @@ subscription = client.Subscription()
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `config` | `dict` | No |  |
-| `expiry` | `str` | No |  |
-| `subscription` | `str` | No |  |
+| `protocol` | `str` | No |  |
+| `server` | `str` | No |  |
 
 ### Operations
 

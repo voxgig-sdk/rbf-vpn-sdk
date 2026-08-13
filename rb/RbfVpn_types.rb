@@ -10,35 +10,27 @@
 
 # Subscription entity data model.
 #
-# @!attribute [rw] config
-#   @return [Hash, nil]
-#
-# @!attribute [rw] expiry
+# @!attribute [rw] protocol
 #   @return [String, nil]
 #
-# @!attribute [rw] subscription
+# @!attribute [rw] server
 #   @return [String, nil]
 Subscription = Struct.new(
-  :config,
-  :expiry,
-  :subscription,
+  :protocol,
+  :server,
   keyword_init: true
 )
 
 # Request payload for Subscription#load.
 #
-# @!attribute [rw] config
-#   @return [Hash, nil]
-#
-# @!attribute [rw] expiry
+# @!attribute [rw] protocol
 #   @return [String, nil]
 #
-# @!attribute [rw] subscription
+# @!attribute [rw] server
 #   @return [String, nil]
 SubscriptionLoadMatch = Struct.new(
-  :config,
-  :expiry,
-  :subscription,
+  :protocol,
+  :server,
   keyword_init: true
 )
 

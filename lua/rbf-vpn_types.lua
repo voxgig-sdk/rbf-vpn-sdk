@@ -7,14 +7,12 @@
 -- edit by hand.
 
 ---@class Subscription
----@field config? table
----@field expiry? string
----@field subscription? string
+---@field protocol? string
+---@field server? string
 
 ---@class SubscriptionLoadMatch
----@field config? table
----@field expiry? string
----@field subscription? string
+---@field protocol? string
+---@field server? string
 
 local M = {}
 

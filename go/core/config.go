@@ -26,24 +26,17 @@ func MakeConfig() map[string]any {
 				"fields": []any{
 					map[string]any{
 						"active": true,
-						"name": "config",
+						"name": "protocol",
 						"req": false,
-						"type": "`$OBJECT`",
+						"type": "`$STRING`",
 						"index$": 0,
 					},
 					map[string]any{
 						"active": true,
-						"name": "expiry",
+						"name": "server",
 						"req": false,
 						"type": "`$STRING`",
 						"index$": 1,
-					},
-					map[string]any{
-						"active": true,
-						"name": "subscription",
-						"req": false,
-						"type": "`$STRING`",
-						"index$": 2,
 					},
 				},
 				"name": "subscription",
@@ -55,6 +48,7 @@ func MakeConfig() map[string]any {
 							map[string]any{
 								"active": true,
 								"args": map[string]any{},
+								"kind": "http",
 								"method": "GET",
 								"orig": "/api/demo",
 								"parts": []any{
@@ -64,12 +58,11 @@ func MakeConfig() map[string]any {
 								"select": map[string]any{},
 								"transform": map[string]any{
 									"req": "`reqdata`",
-									"res": "`body`",
+									"res": "`body.config`",
 								},
 								"index$": 0,
 							},
 						},
-						"key$": "load",
 					},
 				},
 				"relations": map[string]any{

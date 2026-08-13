@@ -90,9 +90,8 @@ local subscription = client:Subscription(nil)
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `config` | `table` | No |  |
-| `expiry` | `string` | No |  |
-| `subscription` | `string` | No |  |
+| `protocol` | `string` | No |  |
+| `server` | `string` | No |  |
 
 ### Operations
 

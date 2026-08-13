@@ -59,11 +59,11 @@ def subscription_direct_setup(mockres)
   calls = []
 
   env = Runner.env_override({
-    "RBFVPN_TEST_SUBSCRIPTION_ENTID" => {},
-    "RBFVPN_TEST_LIVE" => "FALSE",
+    "RBF_VPN_TEST_SUBSCRIPTION_ENTID" => {},
+    "RBF_VPN_TEST_LIVE" => "FALSE",
   })
 
-  live = env["RBFVPN_TEST_LIVE"] == "TRUE"
+  live = env["RBF_VPN_TEST_LIVE"] == "TRUE"
 
   if live
     merged_opts = {

@@ -15,16 +15,14 @@ declare(strict_types=1);
 /** Subscription entity data model. */
 class Subscription
 {
-    public ?array $config = null;
-    public ?string $expiry = null;
-    public ?string $subscription = null;
+    public ?string $protocol = null;
+    public ?string $server = null;
 }
 
 /** Request payload for Subscription#load. */
 class SubscriptionLoadMatch
 {
-    public ?array $config = null;
-    public ?string $expiry = null;
-    public ?string $subscription = null;
+    public ?string $protocol = null;
+    public ?string $server = null;
 }
 

@@ -14,12 +14,12 @@ from __future__ import annotations
 
 from urllib.parse import quote
 
-from config import make_config
-from features import _make_feature
-from core.control import RbfVpnControl
-from core.error import RbfVpnError
-from core.result import RbfVpnResult
-from core.spec import RbfVpnSpec
+from projectname_sdk.config import make_config
+from projectname_sdk.features import _make_feature
+from projectname_sdk.core.control import RbfVpnControl
+from projectname_sdk.core.error import RbfVpnError
+from projectname_sdk.core.result import RbfVpnResult
+from projectname_sdk.core.spec import RbfVpnSpec
 
 
 # True when this SDK was generated with the named feature.

@@ -3,9 +3,9 @@
 import json
 import pytest
 
-from utility.voxgig_struct import voxgig_struct as vs
+from rbfvpn_sdk.utility.voxgig_struct import voxgig_struct as vs
 from rbfvpn_sdk import RbfVpnSDK
-from core import helpers
+from rbfvpn_sdk.core import helpers
 from test import runner
 
 
@@ -56,11 +56,11 @@ def _subscription_direct_setup(mockres):
     calls = []
 
     env = runner.env_override({
-        "RBFVPN_TEST_SUBSCRIPTION_ENTID": {},
-        "RBFVPN_TEST_LIVE": "FALSE",
+        "RBF_VPN_TEST_SUBSCRIPTION_ENTID": {},
+        "RBF_VPN_TEST_LIVE": "FALSE",
     })
 
-    live = env.get("RBFVPN_TEST_LIVE") == "TRUE"
+    live = env.get("RBF_VPN_TEST_LIVE") == "TRUE"
 
     if live:
         merged_opts = {

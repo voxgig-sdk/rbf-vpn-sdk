@@ -1,4 +1,4 @@
-# ProjectName SDK exists test
+# RbfVpn SDK exists test
 
 import pytest
 from rbfvpn_sdk import RbfVpnSDK

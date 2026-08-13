@@ -98,9 +98,8 @@ fmt.Println(subscription.GetName()) // "subscription"
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `config` | `map[string]any` | No |  |
-| `expiry` | `string` | No |  |
-| `subscription` | `string` | No |  |
+| `protocol` | `string` | No |  |
+| `server` | `string` | No |  |
 
 ### Operations
 

@@ -116,9 +116,8 @@ const subscription = client.Subscription()
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `config` | `Record<string, any>` | No |  |
-| `expiry` | `string` | No |  |
-| `subscription` | `string` | No |  |
+| `protocol` | `string` | No |  |
+| `server` | `string` | No |  |
 
 ### Operations
 

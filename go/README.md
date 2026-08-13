@@ -258,9 +258,8 @@ Only `Direct()` returns a response envelope — a `map[string]any` with
 
 | Field | Description |
 | --- | --- |
-| `"config"` |  |
-| `"expiry"` |  |
-| `"subscription"` |  |
+| `"protocol"` |  |
+| `"server"` |  |
 
 Operations: Load.
 
@@ -285,9 +284,8 @@ Create an instance: `subscription := client.Subscription(nil)`
 
 | Field | Type | Description |
 | --- | --- | --- |
-| `config` | `map[string]any` |  |
-| `expiry` | `string` |  |
-| `subscription` | `string` |  |
+| `protocol` | `string` |  |
+| `server` | `string` |  |
 
 #### Example: Load
 

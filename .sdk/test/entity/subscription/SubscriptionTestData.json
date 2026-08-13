@@ -2,21 +2,18 @@
   "existing": {
     "subscription": {
       "SUBSCRIPTION00": {
-        "config": {},
-        "expiry": "s1f",
-        "subscription": "s20",
+        "protocol": "s14",
+        "server": "s15",
         "id": "SUBSCRIPTION00"
       },
       "SUBSCRIPTION01": {
-        "config": {},
-        "expiry": "s3d",
-        "subscription": "s3e",
+        "protocol": "s28",
+        "server": "s29",
         "id": "SUBSCRIPTION01"
       },
       "SUBSCRIPTION02": {
-        "config": {},
-        "expiry": "s5b",
-        "subscription": "s5c",
+        "protocol": "s3c",
+        "server": "s3d",
         "id": "SUBSCRIPTION02"
       }
     }
@@ -24,9 +21,8 @@
   "new": {
     "subscription": {
       "subscription_ref01": {
-        "config": {},
-        "expiry": "s79",
-        "subscription": "s7a"
+        "protocol": "s50",
+        "server": "s51"
       }
     }
   }

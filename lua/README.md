@@ -225,9 +225,8 @@ Only `direct()` returns a response envelope — a `table` with `ok`,
 
 | Field | Description |
 | --- | --- |
-| `config` |  |
-| `expiry` |  |
-| `subscription` |  |
+| `protocol` |  |
+| `server` |  |
 
 Operations: Load.
 
@@ -252,9 +251,8 @@ Create an instance: `local subscription = client:Subscription(nil)`
 
 | Field | Type | Description |
 | --- | --- | --- |
-| `config` | `table` |  |
-| `expiry` | `string` |  |
-| `subscription` | `string` |  |
+| `protocol` | `string` |  |
+| `server` | `string` |  |
 
 #### Example: Load
 

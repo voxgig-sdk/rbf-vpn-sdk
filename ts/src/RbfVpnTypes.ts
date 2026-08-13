@@ -6,14 +6,12 @@
 // @voxgig/apidef VALID_CANON). Do not edit by hand.
 
 export interface Subscription {
-  config?: Record<string, any>
-  expiry?: string
-  subscription?: string
+  protocol?: string
+  server?: string
 }
 
 export interface SubscriptionLoadMatch {
-  config?: Record<string, any>
-  expiry?: string
-  subscription?: string
+  protocol?: string
+  server?: string
 }
 

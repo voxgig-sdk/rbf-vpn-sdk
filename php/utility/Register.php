@@ -23,6 +23,7 @@ require_once __DIR__ . '/MakeUrl.php';
 require_once __DIR__ . '/Param.php';
 require_once __DIR__ . '/PrepareAuth.php';
 require_once __DIR__ . '/PrepareBody.php';
+require_once __DIR__ . '/Graphql.php';
 require_once __DIR__ . '/PrepareHeaders.php';
 require_once __DIR__ . '/PrepareMethod.php';
 require_once __DIR__ . '/PrepareParams.php';
@@ -59,6 +60,8 @@ RbfVpnUtility::setRegistrar(function (RbfVpnUtility $u): void {
     $u->prepare_params = [RbfVpnPrepareParams::class, 'call'];
     $u->prepare_path = [RbfVpnPreparePath::class, 'call'];
     $u->prepare_query = [RbfVpnPrepareQuery::class, 'call'];
+    $u->graphql_body = [RbfVpnGraphql::class, 'body'];
+    $u->graphql_errors = [RbfVpnGraphql::class, 'errors'];
     $u->result_basic = [RbfVpnResultBasic::class, 'call'];
     $u->result_body = [RbfVpnResultBody::class, 'call'];
     $u->result_headers = [RbfVpnResultHeaders::class, 'call'];

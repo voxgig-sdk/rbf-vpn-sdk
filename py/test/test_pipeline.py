@@ -16,11 +16,11 @@
 import pytest
 
 from rbfvpn_sdk import RbfVpnSDK
-from core.error import RbfVpnError
-from core.result import RbfVpnResult
-from core.response import RbfVpnResponse
-from core.spec import RbfVpnSpec
-from feature.base_feature import RbfVpnBaseFeature
+from rbfvpn_sdk.core.error import RbfVpnError
+from rbfvpn_sdk.core.result import RbfVpnResult
+from rbfvpn_sdk.core.response import RbfVpnResponse
+from rbfvpn_sdk.core.spec import RbfVpnSpec
+from rbfvpn_sdk.feature.base_feature import RbfVpnBaseFeature
 
 
 def _client():

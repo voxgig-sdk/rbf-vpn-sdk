@@ -6,17 +6,12 @@ main: kit: entity: subscription: {
 
   fields: [
     {
-      name: "config"
-      req: false
-      type: "`$OBJECT`"
-    }
-    {
-      name: "expiry"
+      name: "protocol"
       req: false
       type: "`$STRING`"
     }
     {
-      name: "subscription"
+      name: "server"
       req: false
       type: "`$STRING`"
     }
@@ -36,7 +31,7 @@ main: kit: entity: subscription: {
           ]
           transform: {
             req: "`reqdata`"
-            res: "`body`"
+            res: "`body.config`"
           }
         }
       ]

@@ -21,7 +21,7 @@ class Config {
 
 
   main = {
-    name: 'ProjectName',
+    name: 'RbfVpn',
   }
 
 
@@ -56,24 +56,17 @@ class Config {
       "fields": [
         {
           "active": true,
-          "name": "config",
+          "name": "protocol",
           "req": false,
-          "type": "`$OBJECT`",
+          "type": "`$STRING`",
           "index$": 0
         },
         {
           "active": true,
-          "name": "expiry",
+          "name": "server",
           "req": false,
           "type": "`$STRING`",
           "index$": 1
-        },
-        {
-          "active": true,
-          "name": "subscription",
-          "req": false,
-          "type": "`$STRING`",
-          "index$": 2
         }
       ],
       "name": "subscription",
@@ -85,6 +78,7 @@ class Config {
             {
               "active": true,
               "args": {},
+              "kind": "http",
               "method": "GET",
               "orig": "/api/demo",
               "parts": [
@@ -94,7 +88,7 @@ class Config {
               "select": {},
               "transform": {
                 "req": "`reqdata`",
-                "res": "`body`"
+                "res": "`body.config`"
               },
               "index$": 0
             }

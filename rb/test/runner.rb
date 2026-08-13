@@ -23,8 +23,8 @@ module RbfVpnTestRunner
   end
 
   def self.env_override(m)
-    live = getenv("RBFVPN_TEST_LIVE")
-    override = getenv("RBFVPN_TEST_OVERRIDE")
+    live = getenv("RBF_VPN_TEST_LIVE")
+    override = getenv("RBF_VPN_TEST_OVERRIDE")
 
     if live == "TRUE" || override == "TRUE"
       m.each_key do |key|
@@ -44,8 +44,8 @@ module RbfVpnTestRunner
       end
     end
 
-    explain = getenv("RBFVPN_TEST_EXPLAIN")
-    m["RBFVPN_TEST_EXPLAIN"] = explain if explain && !explain.empty?
+    explain = getenv("RBF_VPN_TEST_EXPLAIN")
+    m["RBF_VPN_TEST_EXPLAIN"] = explain if explain && !explain.empty?
 
     m
   end

@@ -93,9 +93,8 @@ subscription = client.Subscription
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `config` | `Hash` | No |  |
-| `expiry` | `String` | No |  |
-| `subscription` | `String` | No |  |
+| `protocol` | `String` | No |  |
+| `server` | `String` | No |  |
 
 ### Operations
 

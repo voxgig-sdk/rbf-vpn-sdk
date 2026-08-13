@@ -121,7 +121,8 @@ Create a mock client for unit testing — no server required:
 const client = RbfVpnSDK.test()
 
 const subscription = await client.Subscription().load()
-// subscription is a bare entity populated with mock response data
+// subscription is the entity, populated with mock response data
+// — call subscription.data() for the record itself
 console.log(subscription)
 ```
 
@@ -284,9 +285,8 @@ The `prepare()` method returns:
 
 | Field | Description |
 | --- | --- |
-| `config` |  |
-| `expiry` |  |
-| `subscription` |  |
+| `protocol` |  |
+| `server` |  |
 
 Operations: load.
 
@@ -311,9 +311,8 @@ Create an instance: `const subscription = client.Subscription()`
 
 | Field | Type | Description |
 | --- | --- | --- |
-| `config` | `Record<string, any>` |  |
-| `expiry` | `string` |  |
-| `subscription` | `string` |  |
+| `protocol` | `string` |  |
+| `server` | `string` |  |
 
 #### Example: Load
 

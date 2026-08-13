@@ -38,9 +38,18 @@ network, and no credentials:
 ### TypeScript
 
 ```ts
-const client = RbfVpnSDK.test()
+// The offline mock starts EMPTY — seed it with the records the test needs.
+// Shape: { entity: { <entity-name>: { <id>: <record> } } }
+const client = RbfVpnSDK.test({
+  entity: {
+    subscription: {
+      test01: { id: 'test01' },
+    },
+  },
+})
 const subscription = await client.Subscription().load()
-// subscription is a bare Subscription populated with mock data
+// subscription is the Subscription entity, populated with mock data
+// — call subscription.data() for the record itself
 console.log(subscription)
 ```
 
@@ -182,7 +191,7 @@ require_once 'rbfvpn_sdk.php';
 $client = new RbfVpnSDK();
 
 
-// Load a specific subscription (returns the bare record; throws on error)
+// Load a specific subscription (returns the ENTITY; call data_get() for the record; throws on error)
 $subscription = $client->Subscription()->load();
 print_r($subscription);
 ```
@@ -210,7 +219,7 @@ require_relative "RbfVpn_sdk"
 client = RbfVpnSDK.new
 
 
-# Load a specific subscription (returns the bare record; raises on error)
+# Load a specific subscription (returns the ENTITY; call data_get for the record)
 subscription = client.Subscription.load()
 puts subscription
 ```
@@ -344,6 +353,9 @@ Pass custom features via the `extend` option at construction time.
 
 This SDK is generated from the upstream OpenAPI specification. It is an
 unofficial client and is not affiliated with the API provider.
+
+The OpenAPI spec(s) this SDK was generated from are kept in the
+[`.sdk/def/`](.sdk/def/) folder.
 
 - Upstream API: [https://github.com/l0v3m0n3y/rbfvpn](https://github.com/l0v3m0n3y/rbfvpn)
 

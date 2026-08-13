@@ -43,8 +43,8 @@ class RbfVpnTestRunner
 
     public static function env_override(array $m): array
     {
-        $live = self::getenv('RBFVPN_TEST_LIVE');
-        $override = self::getenv('RBFVPN_TEST_OVERRIDE');
+        $live = self::getenv('RBF_VPN_TEST_LIVE');
+        $override = self::getenv('RBF_VPN_TEST_OVERRIDE');
 
         if ($live === 'TRUE' || $override === 'TRUE') {
             foreach (array_keys($m) as $key) {
@@ -63,9 +63,9 @@ class RbfVpnTestRunner
             }
         }
 
-        $explain = self::getenv('RBFVPN_TEST_EXPLAIN');
+        $explain = self::getenv('RBF_VPN_TEST_EXPLAIN');
         if ($explain !== null && $explain !== '') {
-            $m['RBFVPN_TEST_EXPLAIN'] = $explain;
+            $m['RBF_VPN_TEST_EXPLAIN'] = $explain;
         }
 
         return $m;

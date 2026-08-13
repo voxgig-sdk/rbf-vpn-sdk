@@ -34,7 +34,7 @@ client = RbfVpnSDK.new
 
 ```ruby
 begin
-  # load returns the bare Subscription record (raises on error).
+  # load returns the ENTITY — call data_get for the Subscription record (raises on error).
   subscription = client.Subscription.load()
   puts subscription
 rescue => err
@@ -117,7 +117,8 @@ Create a mock client for unit testing — no server required:
 ```ruby
 client = RbfVpnSDK.test
 
-# Entity ops return the bare mock record (raises on error).
+# Entity ops return the ENTITY (raises on error);
+# call data_get for the mock record.
 subscription = client.Subscription.load()
 puts subscription
 ```
@@ -234,9 +235,8 @@ returns a result `Hash` with these keys:
 
 | Field | Description |
 | --- | --- |
-| `config` |  |
-| `expiry` |  |
-| `subscription` |  |
+| `protocol` |  |
+| `server` |  |
 
 Operations: Load.
 
@@ -261,14 +261,13 @@ Create an instance: `subscription = client.Subscription`
 
 | Field | Type | Description |
 | --- | --- | --- |
-| `config` | `Hash` |  |
-| `expiry` | `String` |  |
-| `subscription` | `String` |  |
+| `protocol` | `String` |  |
+| `server` | `String` |  |
 
 #### Example: Load
 
 ```ruby
-# load returns the bare Subscription record (raises on error).
+# load returns the ENTITY — call data_get for the Subscription record (raises on error).
 subscription = client.Subscription.load()
 ```
 

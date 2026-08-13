@@ -26,24 +26,17 @@ local function make_config()
         ["fields"] = {
           {
             ["active"] = true,
-            ["name"] = "config",
+            ["name"] = "protocol",
             ["req"] = false,
-            ["type"] = "`$OBJECT`",
+            ["type"] = "`$STRING`",
             ["index$"] = 0,
           },
           {
             ["active"] = true,
-            ["name"] = "expiry",
+            ["name"] = "server",
             ["req"] = false,
             ["type"] = "`$STRING`",
             ["index$"] = 1,
-          },
-          {
-            ["active"] = true,
-            ["name"] = "subscription",
-            ["req"] = false,
-            ["type"] = "`$STRING`",
-            ["index$"] = 2,
           },
         },
         ["name"] = "subscription",
@@ -55,6 +48,7 @@ local function make_config()
               {
                 ["active"] = true,
                 ["args"] = {},
+                ["kind"] = "http",
                 ["method"] = "GET",
                 ["orig"] = "/api/demo",
                 ["parts"] = {
@@ -64,7 +58,7 @@ local function make_config()
                 ["select"] = {},
                 ["transform"] = {
                   ["req"] = "`reqdata`",
-                  ["res"] = "`body`",
+                  ["res"] = "`body.config`",
                 },
                 ["index$"] = 0,
               },
