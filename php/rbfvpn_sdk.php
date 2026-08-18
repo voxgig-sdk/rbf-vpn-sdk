@@ -40,7 +40,7 @@ class RbfVpnSDK
         $utility = new RbfVpnUtility();
         $this->_utility = $utility;
 
-        $config = RbfVpnConfig::make_config();
+        $config = RbfVpnConfig::shared_config();
 
         $this->_rootctx = ($utility->make_context)([
             "client" => $this,

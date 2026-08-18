@@ -36,7 +36,7 @@ class Config {
 
 
   options = {
-    base: 'https://rbf1.info',
+    base: "https://rbf1.info",
 
     headers: {
       "content-type": "application/json"
@@ -55,18 +55,12 @@ class Config {
     "subscription": {
       "fields": [
         {
-          "active": true,
           "name": "protocol",
-          "req": false,
-          "type": "`$STRING`",
-          "index$": 0
+          "type": "`$STRING`"
         },
         {
-          "active": true,
           "name": "server",
-          "req": false,
-          "type": "`$STRING`",
-          "index$": 1
+          "type": "`$STRING`"
         }
       ],
       "name": "subscription",
@@ -76,7 +70,6 @@ class Config {
           "name": "load",
           "points": [
             {
-              "active": true,
               "args": {},
               "kind": "http",
               "method": "GET",
@@ -89,11 +82,9 @@ class Config {
               "transform": {
                 "req": "`reqdata`",
                 "res": "`body.config`"
-              },
-              "index$": 0
+              }
             }
-          ],
-          "key$": "load"
+          ]
         }
       },
       "relations": {

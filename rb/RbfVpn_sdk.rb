@@ -28,7 +28,7 @@ class RbfVpnSDK
     utility = RbfVpnUtility.new
     @_utility = utility
 
-    config = RbfVpnConfig.make_config
+    config = RbfVpnConfig.shared_config
 
     @_rootctx = utility.make_context.call({
       "client" => self,
