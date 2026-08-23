@@ -235,8 +235,8 @@ returns a result `Hash` with these keys:
 
 | Field | Description |
 | --- | --- |
-| `protocol` |  |
-| `server` |  |
+| `protocol` | VPN protocol to use |
+| `server` | VPN server address |
 
 Operations: Load.
 
@@ -261,8 +261,8 @@ Create an instance: `subscription = client.Subscription`
 
 | Field | Type | Description |
 | --- | --- | --- |
-| `protocol` | `String` |  |
-| `server` | `String` |  |
+| `protocol` | `String` | VPN protocol to use |
+| `server` | `String` | VPN server address |
 
 #### Example: Load
 

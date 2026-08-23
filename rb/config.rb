@@ -19,6 +19,9 @@ module RbfVpnConfig
     {
       "main" => {
         "name" => "RbfVpn",
+        "slug" => "rbf-vpn",
+        "version" => "0.0.1",
+        "target" => "rb",
       },
       "feature" => {
         "test" => {
@@ -41,10 +44,12 @@ module RbfVpnConfig
           "fields" => [
             {
               "name" => "protocol",
+              "short" => "VPN protocol to use",
               "type" => "`$STRING`",
             },
             {
               "name" => "server",
+              "short" => "VPN server address",
               "type" => "`$STRING`",
             },
           ],

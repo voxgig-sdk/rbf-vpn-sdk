@@ -9,7 +9,7 @@ The API is exposed as capitalised, semantic **Entities** — e.g.
 instead of raw URL paths and query parameters. This keeps the surface
 predictable and low-friction for both humans and AI agents.
 
-> Other languages, the CLI, and MCP server live alongside this one — see
+> Also generated from this model: `go`, `go-cli`, `go-mcp`, `lua`, `php`, `py`, `rb` — see
 > the [top-level README](../README.md).
 
 
@@ -285,8 +285,8 @@ The `prepare()` method returns:
 
 | Field | Description |
 | --- | --- |
-| `protocol` |  |
-| `server` |  |
+| `protocol` | VPN protocol to use |
+| `server` | VPN server address |
 
 Operations: load.
 
@@ -311,8 +311,8 @@ Create an instance: `const subscription = client.Subscription()`
 
 | Field | Type | Description |
 | --- | --- | --- |
-| `protocol` | `string` |  |
-| `server` | `string` |  |
+| `protocol` | `string` | VPN protocol to use |
+| `server` | `string` | VPN server address |
 
 #### Example: Load
 

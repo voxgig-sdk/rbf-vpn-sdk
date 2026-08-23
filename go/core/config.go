@@ -11,6 +11,9 @@ func MakeConfig() map[string]any {
 	return map[string]any{
 		"main": map[string]any{
 			"name": "RbfVpn",
+			"slug": "rbf-vpn",
+			"version": "0.0.1",
+			"target": "go",
 		},
 		"feature": map[string]any{
 			"test": map[string]any{
@@ -33,10 +36,12 @@ func MakeConfig() map[string]any {
 				"fields": []any{
 					map[string]any{
 						"name": "protocol",
+						"short": "VPN protocol to use",
 						"type": "`$STRING`",
 					},
 					map[string]any{
 						"name": "server",
+						"short": "VPN server address",
 						"type": "`$STRING`",
 					},
 				},

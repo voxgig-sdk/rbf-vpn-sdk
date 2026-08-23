@@ -8,11 +8,13 @@ main: kit: entity: subscription: {
     {
       name: "protocol"
       req: false
+      short: "VPN protocol to use"
       type: "`$STRING`"
     }
     {
       name: "server"
       req: false
+      short: "VPN server address"
       type: "`$STRING`"
     }
   ]

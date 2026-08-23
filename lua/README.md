@@ -225,8 +225,8 @@ Only `direct()` returns a response envelope — a `table` with `ok`,
 
 | Field | Description |
 | --- | --- |
-| `protocol` |  |
-| `server` |  |
+| `protocol` | VPN protocol to use |
+| `server` | VPN server address |
 
 Operations: Load.
 
@@ -251,8 +251,8 @@ Create an instance: `local subscription = client:Subscription(nil)`
 
 | Field | Type | Description |
 | --- | --- | --- |
-| `protocol` | `string` |  |
-| `server` | `string` |  |
+| `protocol` | `string` | VPN protocol to use |
+| `server` | `string` | VPN server address |
 
 #### Example: Load
 

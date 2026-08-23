@@ -241,8 +241,8 @@ On error, `ok` is `False` and `err` contains the error value.
 
 | Field | Description |
 | --- | --- |
-| `protocol` |  |
-| `server` |  |
+| `protocol` | VPN protocol to use |
+| `server` | VPN server address |
 
 Operations: Load.
 
@@ -267,8 +267,8 @@ Create an instance: `subscription = client.Subscription()`
 
 | Field | Type | Description |
 | --- | --- | --- |
-| `protocol` | `str` |  |
-| `server` | `str` |  |
+| `protocol` | `str` | VPN protocol to use |
+| `server` | `str` | VPN server address |
 
 #### Example: Load
 

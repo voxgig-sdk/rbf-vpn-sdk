@@ -245,8 +245,8 @@ On error, `ok` is `false` and `$err` contains the error value.
 
 | Field | Description |
 | --- | --- |
-| `protocol` |  |
-| `server` |  |
+| `protocol` | VPN protocol to use |
+| `server` | VPN server address |
 
 Operations: Load.
 
@@ -271,8 +271,8 @@ Create an instance: `$subscription = $client->Subscription();`
 
 | Field | Type | Description |
 | --- | --- | --- |
-| `protocol` | `string` |  |
-| `server` | `string` |  |
+| `protocol` | `string` | VPN protocol to use |
+| `server` | `string` | VPN server address |
 
 #### Example: Load
 

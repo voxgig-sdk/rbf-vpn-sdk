@@ -36,12 +36,14 @@
               "active": true,
               "name": "protocol",
               "req": false,
+              "short": "VPN protocol to use",
               "type": "`$STRING`"
             },
             {
               "active": true,
               "name": "server",
               "req": false,
+              "short": "VPN server address",
               "type": "`$STRING`"
             }
           ],

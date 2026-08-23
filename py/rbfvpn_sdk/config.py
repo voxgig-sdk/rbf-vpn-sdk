@@ -28,6 +28,9 @@ def make_config():
     return {
         "main": {
             "name": "RbfVpn",
+            "slug": "rbf-vpn",
+            "version": "0.0.1",
+            "target": "py",
         },
         "feature": {
             "test": {
@@ -50,10 +53,12 @@ def make_config():
         "fields": [
           {
             "name": "protocol",
+            "short": "VPN protocol to use",
             "type": "`$STRING`",
           },
           {
             "name": "server",
+            "short": "VPN server address",
             "type": "`$STRING`",
           },
         ],

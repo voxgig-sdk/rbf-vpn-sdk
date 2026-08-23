@@ -6,7 +6,7 @@ The Golang SDK for the RbfVpn API — an entity-oriented client using standard G
 
 It exposes the API as capitalised, semantic **Entities** — e.g. `client.Subscription(nil)` — each with the same small set of operations (`Load`) instead of raw URL paths and query strings. You call meaning, not endpoints, which keeps the cognitive load low.
 
-> Other languages, the CLI, and MCP server live alongside this one — see
+> Also generated from this model: `go-cli`, `go-mcp`, `lua`, `php`, `py`, `rb`, `ts` — see
 > the [top-level README](../README.md).
 
 
@@ -258,8 +258,8 @@ Only `Direct()` returns a response envelope — a `map[string]any` with
 
 | Field | Description |
 | --- | --- |
-| `"protocol"` |  |
-| `"server"` |  |
+| `"protocol"` | VPN protocol to use |
+| `"server"` | VPN server address |
 
 Operations: Load.
 
@@ -284,8 +284,8 @@ Create an instance: `subscription := client.Subscription(nil)`
 
 | Field | Type | Description |
 | --- | --- | --- |
-| `protocol` | `string` |  |
-| `server` | `string` |  |
+| `protocol` | `string` | VPN protocol to use |
+| `server` | `string` | VPN server address |
 
 #### Example: Load
 

@@ -92,8 +92,8 @@ $subscription = $client->Subscription();
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `protocol` | `string` | No |  |
-| `server` | `string` | No |  |
+| `protocol` | `string` | No | VPN protocol to use |
+| `server` | `string` | No | VPN server address |
 
 ### Operations
 

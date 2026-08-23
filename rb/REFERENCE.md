@@ -93,8 +93,8 @@ subscription = client.Subscription
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `protocol` | `String` | No |  |
-| `server` | `String` | No |  |
+| `protocol` | `String` | No | VPN protocol to use |
+| `server` | `String` | No | VPN server address |
 
 ### Operations
 
