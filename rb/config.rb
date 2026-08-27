@@ -28,6 +28,7 @@ module RbfVpnConfig
           "options" => {
             "active" => false,
           },
+          "transport" => "base",
         },
       },
       "options" => {
