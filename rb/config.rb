@@ -65,15 +65,23 @@ module RbfVpnConfig
                   "kind" => "http",
                   "method" => "GET",
                   "orig" => "/api/demo",
-                  "parts" => [
-                    "api",
-                    "demo",
+                  "segments" => [
+                    {
+                      "lit" => "api",
+                    },
+                    {
+                      "lit" => "demo",
+                    },
                   ],
                   "select" => {},
                   "transform" => {
                     "req" => "`reqdata`",
                     "res" => "`body.config`",
                   },
+                  "parts" => [
+                    "api",
+                    "demo",
+                  ],
                 },
               ],
             },

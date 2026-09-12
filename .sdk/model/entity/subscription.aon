@@ -27,9 +27,13 @@ main: kit: entity: subscription: {
         {
           method: "GET"
           orig: "/api/demo"
-          parts: [
-            "api"
-            "demo"
+          segments: [
+            {
+              lit: "api"
+            }
+            {
+              lit: "demo"
+            }
           ]
           transform: {
             req: "`reqdata`"
