@@ -28,7 +28,7 @@ loading a specific record.
 ### 1. Create a client
 
 ```ts
-import { RbfVpnSDK } from '@voxgig-sdk/rbf-vpn'
+import { RbfVpnSDK } from '@voxgig-sdk/rbf-vpn-sdk'
 
 const client = new RbfVpnSDK()
 ```
@@ -403,7 +403,7 @@ rbf-vpn/
 Import the SDK from the package root:
 
 ```ts
-import { RbfVpnSDK } from '@voxgig-sdk/rbf-vpn'
+import { RbfVpnSDK } from '@voxgig-sdk/rbf-vpn-sdk'
 ```
 
 ### Entity state

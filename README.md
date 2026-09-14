@@ -105,7 +105,7 @@ local result, err = client:Subscription():load()
 
 | Language | Package | Install |
 | --- | --- | --- |
-| TypeScript | `@voxgig-sdk/rbf-vpn` | publish pending — [install from git tag](https://github.com/voxgig-sdk/rbf-vpn-sdk/releases) |
+| TypeScript | `@voxgig-sdk/rbf-vpn-sdk` | publish pending — [install from git tag](https://github.com/voxgig-sdk/rbf-vpn-sdk/releases) |
 | Python | `voxgig-sdk-rbf-vpn` | publish pending — [install from git tag](https://github.com/voxgig-sdk/rbf-vpn-sdk/releases) |
 | PHP | `voxgig-sdk/rbf-vpn` | publish pending — [install from git tag](https://github.com/voxgig-sdk/rbf-vpn-sdk/releases) |
 | Golang | `github.com/voxgig-sdk/rbf-vpn-sdk/go` | `go get github.com/voxgig-sdk/rbf-vpn-sdk/go@latest` |
@@ -119,7 +119,7 @@ local result, err = client:Subscription():load()
 ### TypeScript
 
 ```ts
-import { RbfVpnSDK } from '@voxgig-sdk/rbf-vpn'
+import { RbfVpnSDK } from '@voxgig-sdk/rbf-vpn-sdk'
 
 const client = new RbfVpnSDK()
 
