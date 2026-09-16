@@ -1,12 +1,18 @@
 # RbfVpn SDK feature factory
 
 from rbfvpn_sdk.feature.base_feature import RbfVpnBaseFeature
+from rbfvpn_sdk.feature.ratelimit_feature import RbfVpnRatelimitFeature
+from rbfvpn_sdk.feature.retry_feature import RbfVpnRetryFeature
 from rbfvpn_sdk.feature.test_feature import RbfVpnTestFeature
+from rbfvpn_sdk.feature.timeout_feature import RbfVpnTimeoutFeature
 
 
 _FEATURES = {
     "base": lambda: RbfVpnBaseFeature(),
+    "ratelimit": lambda: RbfVpnRatelimitFeature(),
+    "retry": lambda: RbfVpnRetryFeature(),
     "test": lambda: RbfVpnTestFeature(),
+    "timeout": lambda: RbfVpnTimeoutFeature(),
 }
 
 

@@ -4,7 +4,10 @@ declare(strict_types=1);
 // RbfVpn SDK feature factory
 
 require_once __DIR__ . '/feature/BaseFeature.php';
+require_once __DIR__ . '/feature/RatelimitFeature.php';
+require_once __DIR__ . '/feature/RetryFeature.php';
 require_once __DIR__ . '/feature/TestFeature.php';
+require_once __DIR__ . '/feature/TimeoutFeature.php';
 
 
 class RbfVpnFeatures
@@ -14,8 +17,14 @@ class RbfVpnFeatures
         switch ($name) {
             case "base":
                 return new RbfVpnBaseFeature();
+            case "ratelimit":
+                return new RbfVpnRatelimitFeature();
+            case "retry":
+                return new RbfVpnRetryFeature();
             case "test":
                 return new RbfVpnTestFeature();
+            case "timeout":
+                return new RbfVpnTimeoutFeature();
             default:
                 return new RbfVpnBaseFeature();
         }
@@ -31,7 +40,10 @@ class RbfVpnFeatures
     {
         switch ($name) {
             case "base":
+            case "ratelimit":
+            case "retry":
             case "test":
+            case "timeout":
                 return true;
             default:
                 return false;
