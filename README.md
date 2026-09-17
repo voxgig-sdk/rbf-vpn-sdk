@@ -105,12 +105,12 @@ local result, err = client:Subscription():load()
 
 | Language | Package | Install |
 | --- | --- | --- |
-| TypeScript | `@voxgig-sdk/rbf-vpn-sdk` | publish pending — [install from git tag](https://github.com/voxgig-sdk/rbf-vpn-sdk/releases) |
-| Python | `voxgig-sdk-rbf-vpn` | publish pending — [install from git tag](https://github.com/voxgig-sdk/rbf-vpn-sdk/releases) |
-| PHP | `voxgig-sdk/rbf-vpn` | publish pending — [install from git tag](https://github.com/voxgig-sdk/rbf-vpn-sdk/releases) |
+| TypeScript | `@voxgig-sdk/rbf-vpn-sdk` | publish pending — [install from git tag](https://github.com/voxgig-sdk/rbf-vpn-sdk/tags) |
+| Python | `voxgig-sdk-rbf-vpn` | publish pending — [install from git tag](https://github.com/voxgig-sdk/rbf-vpn-sdk/tags) |
+| PHP | `voxgig-sdk/rbf-vpn` | publish pending — [install from git tag](https://github.com/voxgig-sdk/rbf-vpn-sdk/tags) |
 | Golang | `github.com/voxgig-sdk/rbf-vpn-sdk/go` | `go get github.com/voxgig-sdk/rbf-vpn-sdk/go@latest` |
-| Ruby | `voxgig-sdk-rbf-vpn` | publish pending — [install from git tag](https://github.com/voxgig-sdk/rbf-vpn-sdk/releases) |
-| Lua | `voxgig-sdk-rbf-vpn` | publish pending — [install from git tag](https://github.com/voxgig-sdk/rbf-vpn-sdk/releases) |
+| Ruby | `voxgig-sdk-rbf-vpn` | publish pending — [install from git tag](https://github.com/voxgig-sdk/rbf-vpn-sdk/tags) |
+| Lua | `voxgig-sdk-rbf-vpn` | publish pending — [install from git tag](https://github.com/voxgig-sdk/rbf-vpn-sdk/tags) |
 | Go CLI | `github.com/voxgig-sdk/rbf-vpn-sdk/go-cli` | `go install github.com/voxgig-sdk/rbf-vpn-sdk/go-cli/cmd/rbf-vpn@latest` |
 | Go MCP server | `github.com/voxgig-sdk/rbf-vpn-sdk/go-mcp` | `go get github.com/voxgig-sdk/rbf-vpn-sdk/go-mcp@latest` |
 
