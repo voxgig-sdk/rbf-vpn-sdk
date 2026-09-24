@@ -29,81 +29,8 @@
   "requests": {
     "GET /api/demo": {
       "provenance": "operation-contract",
-      "contract": {
-        "operationId": "getDemoSubscription",
-        "parameters": [],
-        "protocol": "http",
-        "responses": {
-          "200": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "properties": {
-                    "config": {
-                      "description": "VPN configuration details for the demo subscription",
-                      "properties": {
-                        "protocol": {
-                          "description": "VPN protocol to use",
-                          "type": "string"
-                        },
-                        "server": {
-                          "description": "VPN server address",
-                          "type": "string"
-                        }
-                      },
-                      "type": "object"
-                    },
-                    "expiry": {
-                      "description": "Expiration date and time of the demo subscription",
-                      "format": "date-time",
-                      "type": "string"
-                    },
-                    "subscription": {
-                      "description": "Demo subscription identifier or access token",
-                      "type": "string"
-                    }
-                  },
-                  "type": "object"
-                }
-              }
-            },
-            "description": "Successful response with demo subscription details"
-          },
-          "400": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "properties": {
-                    "error": {
-                      "description": "Error message describing what went wrong",
-                      "type": "string"
-                    }
-                  },
-                  "type": "object"
-                }
-              }
-            },
-            "description": "Bad request - Invalid parameters"
-          },
-          "500": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "properties": {
-                    "error": {
-                      "description": "Error message describing the server issue",
-                      "type": "string"
-                    }
-                  },
-                  "type": "object"
-                }
-              }
-            },
-            "description": "Internal server error"
-          }
-        },
-        "securitySource": "unspecified"
-      }
+      "version": 2,
+      "source": "openapi3"
     }
   }
 }

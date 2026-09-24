@@ -1,0 +1,56 @@
+# Entity: subscription
+
+main: kit: entity: subscription: {
+
+  alias: field: {}
+
+  fields: {
+    protocol: {
+      h: "Protocol"
+      n: "protocol"
+      r: false
+      sh: "VPN protocol to use"
+      t: "`$STRING`"
+    }
+    server: {
+      h: "Server"
+      n: "server"
+      r: false
+      sh: "VPN server address"
+      t: "`$STRING`"
+    }
+  }
+
+  name: "subscription"
+  op: {
+    load: {
+      name: "load"
+      points: [
+        {
+          co: {
+            id: "GET /api/demo"
+            source: "openapi3"
+            version: 2
+          }
+          m: "GET"
+          o: "/api/demo"
+          s: [
+            {
+              lit: "api"
+            }
+            {
+              lit: "demo"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body.config`"
+          }
+        }
+      ]
+    }
+  }
+
+
+
+}

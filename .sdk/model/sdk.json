@@ -24,28 +24,96 @@
         "repr": "auto"
       },
       "contributor": {},
+      "doc": {
+        "active": true,
+        "assets": {
+          "path": ".sdk/doc/assets"
+        },
+        "brand": {
+          "label": "",
+          "notice": "",
+          "shortNotice": "",
+          "url": ""
+        },
+        "ci": {
+          "active": true,
+          "branch": "main"
+        },
+        "content": {
+          "path": ".sdk/doc/content"
+        },
+        "edition": {
+          "summary": {
+            "active": true,
+            "base": "node_modules/@voxgig/docgen/project/.sdk",
+            "brand": {},
+            "filter": {
+              "entities": [],
+              "features": [],
+              "targets": []
+            },
+            "kind": "summary",
+            "name": "summary",
+            "origname": "",
+            "output": {
+              "path": "SUMMARY.md"
+            },
+            "package": "@voxgig/docgen",
+            "published": false,
+            "site": {
+              "active": true
+            },
+            "style": {},
+            "title": ""
+          }
+        },
+        "qa": {
+          "vocabulary": []
+        },
+        "style": {
+          "color": {
+            "accent": "#00c6d8",
+            "background": "#f5f5f9",
+            "darkBackground": "#0f1117",
+            "darkText": "#e6edf3",
+            "primary": "#e70042",
+            "text": "#0a0a0a"
+          },
+          "font": "Nunito, system-ui, sans-serif",
+          "fontFile": "",
+          "headingFont": "Nunito, system-ui, sans-serif",
+          "headingFontFile": "",
+          "logo": "",
+          "mode": "light",
+          "mono": "ui-monospace, monospace",
+          "monoFile": ""
+        },
+        "target": {}
+      },
       "entity": {
         "subscription": {
           "active": true,
           "alias": {
             "field": {}
           },
-          "fields": [
-            {
-              "active": true,
-              "name": "protocol",
-              "req": false,
-              "short": "VPN protocol to use",
-              "type": "`$STRING`"
+          "fields": {
+            "protocol": {
+              "a": true,
+              "h": "Protocol",
+              "n": "protocol",
+              "r": false,
+              "sh": "VPN protocol to use",
+              "t": "`$STRING`"
             },
-            {
-              "active": true,
-              "name": "server",
-              "req": false,
-              "short": "VPN server address",
-              "type": "`$STRING`"
+            "server": {
+              "a": true,
+              "h": "Server",
+              "n": "server",
+              "r": false,
+              "sh": "VPN server address",
+              "t": "`$STRING`"
             }
-          ],
+          },
           "name": "subscription",
           "op": {
             "load": {
@@ -53,18 +121,19 @@
               "name": "load",
               "points": [
                 {
-                  "active": true,
-                  "args": {},
-                  "contract": {
+                  "a": true,
+                  "co": {
                     "id": "GET /api/demo",
-                    "json": "{\"operationId\":\"getDemoSubscription\",\"parameters\":[],\"protocol\":\"http\",\"responses\":{\"200\":{\"content\":{\"application/json\":{\"schema\":{\"properties\":{\"config\":{\"description\":\"VPN configuration details for the demo subscription\",\"properties\":{\"protocol\":{\"description\":\"VPN protocol to use\",\"type\":\"string\"},\"server\":{\"description\":\"VPN server address\",\"type\":\"string\"}},\"type\":\"object\"},\"expiry\":{\"description\":\"Expiration date and time of the demo subscription\",\"format\":\"date-time\",\"type\":\"string\"},\"subscription\":{\"description\":\"Demo subscription identifier or access token\",\"type\":\"string\"}},\"type\":\"object\"}}},\"description\":\"Successful response with demo subscription details\"},\"400\":{\"content\":{\"application/json\":{\"schema\":{\"properties\":{\"error\":{\"description\":\"Error message describing what went wrong\",\"type\":\"string\"}},\"type\":\"object\"}}},\"description\":\"Bad request - Invalid parameters\"},\"500\":{\"content\":{\"application/json\":{\"schema\":{\"properties\":{\"error\":{\"description\":\"Error message describing the server issue\",\"type\":\"string\"}},\"type\":\"object\"}}},\"description\":\"Internal server error\"}},\"securitySource\":\"unspecified\"}",
                     "source": "openapi3",
-                    "version": 1
+                    "version": 2
                   },
-                  "kind": "http",
-                  "method": "GET",
-                  "orig": "/api/demo",
-                  "segments": [
+                  "g": {},
+                  "k": "http",
+                  "m": "GET",
+                  "o": "/api/demo",
+                  "q": {},
+                  "r": {},
+                  "s": [
                     {
                       "lit": "api"
                     },
@@ -72,8 +141,7 @@
                       "lit": "demo"
                     }
                   ],
-                  "select": {},
-                  "transform": {
+                  "t": {
                     "req": "`reqdata`",
                     "res": "`body.config`"
                   }
@@ -502,17 +570,17 @@
           "param": {},
           "step": [
             {
-              "active": true,
-              "data": {},
-              "input": {
+              "a": true,
+              "d": {},
+              "i": {
                 "ref": "subscription_ref01",
                 "srcdatavar": "subscription_ref01_data",
                 "suffix": "_dt0"
               },
-              "match": {},
-              "op": "load",
-              "spec": [],
-              "valid": [
+              "m": {},
+              "o": "load",
+              "s": [],
+              "v": [
                 {
                   "apply": "TextFieldMark",
                   "def": {

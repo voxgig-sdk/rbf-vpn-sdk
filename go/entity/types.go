@@ -1,7 +1,7 @@
 // Typed models for the RbfVpn SDK.
 //
-// GENERATED from the API model: main.kit.entity.<e>.fields[] and per-op
-// params (op.<name>.points[].args.params[]). Field/param types come from the
+// GENERATED from the API model: main.kit.entity.<e>.fields{} and per-op
+// params (op.<name>.points[].g.params[]). Field/param types come from the
 // canonical type sentinels via @voxgig/sdkgen canonToType (source of truth:
 // @voxgig/apidef VALID_CANON). Do not edit by hand.
 package entity
@@ -14,8 +14,6 @@ import (
 
 // Subscription is the typed data model for the subscription entity.
 type Subscription struct {
-	Protocol *string `json:"protocol,omitempty"`
-	Server *string `json:"server,omitempty"`
 }
 
 // SubscriptionLoadMatch is the typed request payload for Subscription.LoadTyped.

@@ -113,13 +113,15 @@ class RbfVpnConfig
           'fields' => [
             [
               'name' => 'protocol',
-              'short' => 'VPN protocol to use',
+              'title' => 'Protocol',
               'type' => '`$STRING`',
+              'short' => 'VPN protocol to use',
             ],
             [
               'name' => 'server',
-              'short' => 'VPN server address',
+              'title' => 'Server',
               'type' => '`$STRING`',
+              'short' => 'VPN server address',
             ],
           ],
           'name' => 'subscription',
@@ -129,7 +131,6 @@ class RbfVpnConfig
               'name' => 'load',
               'points' => [
                 [
-                  'args' => [],
                   'kind' => 'http',
                   'method' => 'GET',
                   'orig' => '/api/demo',
@@ -141,15 +142,17 @@ class RbfVpnConfig
                       'lit' => 'demo',
                     ],
                   ],
-                  'select' => [],
-                  'transform' => [
-                    'req' => '`reqdata`',
-                    'res' => '`body.config`',
-                  ],
                   'parts' => [
                     'api',
                     'demo',
                   ],
+                  'rename' => [],
+                  'transform' => [
+                    'req' => '`reqdata`',
+                    'res' => '`body.config`',
+                  ],
+                  'args' => [],
+                  'select' => [],
                 ],
               ],
             ],

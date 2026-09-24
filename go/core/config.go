@@ -91,13 +91,15 @@ func MakeConfig() map[string]any {
 				"fields": []any{
 					map[string]any{
 						"name": "protocol",
-						"short": "VPN protocol to use",
+						"title": "Protocol",
 						"type": "`$STRING`",
+						"short": "VPN protocol to use",
 					},
 					map[string]any{
 						"name": "server",
-						"short": "VPN server address",
+						"title": "Server",
 						"type": "`$STRING`",
+						"short": "VPN server address",
 					},
 				},
 				"name": "subscription",
@@ -107,7 +109,6 @@ func MakeConfig() map[string]any {
 						"name": "load",
 						"points": []any{
 							map[string]any{
-								"args": map[string]any{},
 								"kind": "http",
 								"method": "GET",
 								"orig": "/api/demo",
@@ -119,15 +120,17 @@ func MakeConfig() map[string]any {
 										"lit": "demo",
 									},
 								},
-								"select": map[string]any{},
-								"transform": map[string]any{
-									"req": "`reqdata`",
-									"res": "`body.config`",
-								},
 								"parts": []any{
 									"api",
 									"demo",
 								},
+								"rename": map[string]any{},
+								"transform": map[string]any{
+									"req": "`reqdata`",
+									"res": "`body.config`",
+								},
+								"args": map[string]any{},
+								"select": map[string]any{},
 							},
 						},
 					},
